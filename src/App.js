@@ -1,7 +1,7 @@
 import './App.css';
 import Grid from './components/Grid'
 import ColorPicker from './components/ColorPicker';
-import FillColor from './components/FillColor';
+import Buttons from './components/Buttons';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       </header>
      <Grid />
      <ColorPicker />
-     <FillColor />
+     <Buttons />
     </div>
   );
 }

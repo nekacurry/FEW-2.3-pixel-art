@@ -1,9 +1,9 @@
-import { SET_COLOR, FILL_COLOR } from '../actions';
+import { SET_COLOR, FILL_COLOR, RESET } from '../actions';
 
 const defaultGrid = () => {
   const arr = []
   for (let i = 0; i < 64; i += 1 ) {
-    arr.push('#ccc')
+    arr.push('#f7f7f7')
   }
   return arr
 }
@@ -21,8 +21,12 @@ const gridReducer = (state = defaultGrid(), action) => {
     case FILL_COLOR:
       return state.map(() => action.payload.color)
 
+    case RESET:
+      return defaultGrid()
+
     default:
       return state
+
   }
 }
 
