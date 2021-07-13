@@ -8,7 +8,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 
-import { HashRouter } from 'react-router-dom'
+
 
 
 
@@ -16,11 +16,9 @@ const store = createStore(rootReducer)
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
       <Provider store={store}>
         <App />
       </Provider>
-    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
