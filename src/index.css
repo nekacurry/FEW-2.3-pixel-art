@@ -1,21 +1,9 @@
 :root {
   --bg-color: #ffffff42;
 
-  /* Border Colors are all transparent colors. These will tint or shade the background color of the square. */
-  --border-left-color: rgba(255, 255, 255, 0.20);
-  --border-top-color: rgba(255, 255, 255, 0.33);
-  --border-right-color: rgba(0, 0, 0, 0.15);
-  --border-bottom-color: rgba(0, 0, 0, 0.5);
-
-  /* Button Colors */
-  --button-color-t: rgba(200, 200, 200, 1);
-  --button-color-r: rgba(150, 150, 150, 1);
-  --button-color-b: rgba(120, 120, 120, 1);
-  --button-color-l: rgba(222, 222, 222, 1);
-
-  --cols: 8;
-  --rows: 8;
-  --tile-size: 30px;
+  --cols: 10;
+  --rows: 10;
+  --tile-size: 45px;
   --border-width: 2px;
 }
 
@@ -36,20 +24,21 @@ code {
     monospace;
 }
 
+/* App */
 
 .App {
   background-color: var(--bg-color);
   border-radius: 10px;
 
   --col-side: calc(var(--tile-size) * 4);
-  --col-center: calc(var(--tile-size) * 8);
-  --grid-height: calc(var(--tile-size) * 8);
+  --col-center: calc(var(--tile-size) * 10);
+  --grid-height: calc(var(--tile-size) * 10);
 
   width: calc(var(--tile-size) * (4 + 1 + 10 + 1 + 4));
   margin: auto;
   display: grid;
 
-  grid-gap: var(--tile-size) var(--tile-size);
+  grid-gap: 40px;
   /* Defines three columns of `--col-side`, `--col-center`, and `--col-side` widths. */
   grid-template-columns: var(--col-side) var(--col-center) var(--col-side);
   /* Defines three rows of `100px`, `--grid-height`, and 100px. */
@@ -57,13 +46,17 @@ code {
 
   grid-template-areas: 
   "h h h"
-  "l c r"
-  ". b f";
+  ". c l"
+  ". b .";
 }
+
+/* Header */
 
 .App-header {
   grid-area: h;
 }
+
+/* Buttons */
 
 .buttons {
   grid-area: b;
@@ -77,14 +70,16 @@ button.fill-button, button.reset-button {
   padding:0.3em 1.2em;
   margin:0 0.1em 0.1em 0;
   border:0.16em solid rgba(255,255,255,0);
-  border-radius:.5em;
+  border-radius: 1em;
   box-sizing: border-box;
-  font-weight:300;
   color:#FFFFFF;
   text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
   text-align:center;
   transition: all 0.2s;
   cursor: pointer;
+  height: 50px;
+  width: 100px;
+  font-size: 1.2rem;
 }
 
 button.fill-button {
@@ -99,11 +94,23 @@ button.fill-button:hover,button.reset-button:hover {
   border-color: var(--bg-color);
 }
 
+/* Color Picker */
+
 .picker {
-  grid-area: r;
+  grid-area: l;
   display: flex;
-  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
+
+.picker > input {
+  width: 40px;
+  height: 300px;
+  border-color: var(--bg-color);
+  border-radius: 5px;
+}
+
+/* Grid */
 
 .Grid {
   display: grid;
@@ -112,11 +119,11 @@ button.fill-button:hover,button.reset-button:hover {
   align-self: flex-start;
   grid-area: c;
   background-color: var(--bg-color);
-  border: solid var(--bg-color);
+  border: solid 10px var(--bg-color);
 
 }
 
 .Grid > div {
-  width: 30px;
-  height: 30px;
+  width: var(--tile-size);
+  height: var(--tile-size);
 }

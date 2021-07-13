@@ -9,12 +9,6 @@ function ColorPicker() {
 
   return (
     <div className={'picker'}>
-      <div 
-        style={{
-        width: '50px',
-        height: '40px', 
-        backgroundColor: color
-      }}></div>
       <input 
         type="color"
         value={color}

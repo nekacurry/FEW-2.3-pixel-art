@@ -10,7 +10,7 @@ function Buttons() {
       <button
         className={'fill-button'}
         onClick={() => dispatch(fillColor(color))}
-      >Fill Color</button>
+      >Fill</button>
 
       <button className="reset-button" onClick={(e) => {
         dispatch(reset())
