@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setColor } from './actions'
-import './Grid.css';
+import { setColor } from '../actions/index'
 
 
 function Grid() {

@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { fillColor } from './actions'
+import { fillColor } from '../actions/index'
 
 function FillColor() {
   const { color } = useSelector(state => state)
@@ -7,6 +7,7 @@ function FillColor() {
 
   return (
     <button
+      className={'fill'}
       onClick={() => dispatch(fillColor(color))}
     >Fill Color</button>
   )

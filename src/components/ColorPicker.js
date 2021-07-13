@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { pickColor } from './actions'
+import { pickColor } from '../actions/index'
 
 function ColorPicker() {
 
@@ -8,10 +8,11 @@ function ColorPicker() {
   const dispatch = useDispatch()
 
   return (
-    <div>
-      <div style={{
-        width: '40px',
-        height: '40px',
+    <div className={'picker'}>
+      <div 
+        style={{
+        width: '50px',
+        height: '40px', 
         backgroundColor: color
       }}></div>
       <input 
