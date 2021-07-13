@@ -1,3 +1,4 @@
+
 :root {
   --bg-color: #ffffff42;
 
@@ -31,7 +32,7 @@ code {
   border-radius: 10px;
 
   --col-side: calc(var(--tile-size) * 4);
-  --col-center: calc(var(--tile-size) * 10);
+  --col-center: calc((var(--tile-size) * 10) + 30px);
   --grid-height: calc(var(--tile-size) * 10);
 
   width: calc(var(--tile-size) * (4 + 1 + 10 + 1 + 4));
