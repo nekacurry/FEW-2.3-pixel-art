@@ -62,6 +62,10 @@ code {
   grid-area: h;
 }
 
+h1.App-title {
+  margin-bottom: 0;
+}
+
 /* Buttons */
 
 .buttons {
