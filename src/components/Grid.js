@@ -1,5 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { setColor } from '../actions/index'
+import { useRef } from 'react'
+import { exportComponentAsPNG } from 'react-component-export-image'
 
 
 function Grid() {
@@ -7,12 +9,21 @@ function Grid() {
   const selectedColor = useSelector(state => state.color)
   const dispatch = useDispatch()
 
+  const panelRef = useRef()
+
   return (
-    <div className='Grid'>
-      {arr.map((color, i) => <div 
-        style ={{ backgroundColor: color}} 
-        onClick={() => dispatch(setColor(selectedColor, i))}
-      />)}
+    <div>
+      <div className='Grid' ref={panelRef}>
+        {arr.map((color, i) => <div 
+          style ={{ backgroundColor: color}} 
+          onClick={() => dispatch(setColor(selectedColor, i))}
+        />)}
+      </div>
+      <button 
+        onClick={() => exportComponentAsPNG(panelRef, { html2CanvasOptions: {backgroundColor: null}})}
+        className='save-btn'>
+          Save
+        </button>
     </div>
   )
 }

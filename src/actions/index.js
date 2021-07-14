@@ -2,6 +2,7 @@ export const SET_COLOR = 'SET_COLOR'
 export const PICK_COLOR = 'PICK_COLOR'
 export const FILL_COLOR = 'FILL_COLOR'
 export const RESET = 'RESET'
+// export const ERASE = 'ERASE'
 
 export const fillColor = (color) => {
   return {
@@ -27,3 +28,10 @@ export const pickColor = (color) => {
 export const reset = () => {
   return { type: RESET }
 }
+
+// export const erase = (dC, index) => {
+//   return { 
+//     type: ERASE,
+//     payload: {dC, index} 
+//   }
+// }

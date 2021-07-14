@@ -37,7 +37,7 @@ code {
   --col-center: calc((var(--tile-size) * 16) + 35px);
   --grid-height: calc(var(--tile-size) * 16);
 
-  width: calc(var(--tile-size) * (8 + 2 + 10 + 2 + 8));
+  width: calc(var(--tile-size) * (8 + 2 + 10 + 2 + 5.8));
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -52,7 +52,7 @@ code {
 
   grid-template-areas: 
   "h h h"
-  ". c l"
+  "l c r"
   "f b .";
 }
 
@@ -68,17 +68,23 @@ h1.App-title {
 
 /* Buttons */
 
-.buttons {
+.save-btn {
   grid-area: b;
-  align-self: center;
-  display: flex;
-  justify-content: space-around;
+  margin-top: 20px;
 }
 
-button.fill-button, button.reset-button {
+.buttons {
+  grid-area: l;
+  align-self: center;
+  display: flex;
+  align-content: flex-end;
+  flex-direction: column;
+}
+
+button.fill-button, button.reset-button, button.save-btn {
   display:inline-block;
   padding:0.3em 1.2em;
-  margin:0 0.1em 0.1em 0;
+  margin:1.5em 1em 1em 1.5em;
   border:0.16em solid rgba(255,255,255,0);
   border-radius: 1em;
   box-sizing: border-box;
@@ -92,6 +98,10 @@ button.fill-button, button.reset-button {
   font-size: 1.2rem;
   border-color: var(--bg-color);
   font-family: 'Nunito';
+}
+
+button.save-btn {
+  background-color: #4ef1b38f;
 }
 
 button.fill-button {
@@ -110,17 +120,23 @@ button.reset-button:hover {
   background-color: #d444a7d2;
 }
 
+button.save-btn:hover {
+  background-color: #3dc08eb6;
+}
+
+
 /* Color Picker */
 
 .picker {
-  grid-area: l;
+  grid-area: r;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 37px;
 }
 
 .picker > input {
-  width: 40px;
+  width: 50px;
   height: 300px;
   background-color: var(--bg-color);
   border-color: var(--bg-color);
@@ -136,7 +152,7 @@ button.reset-button:hover {
   grid-gap: 1px;
   align-self: flex-start;
   grid-area: c;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   border: solid 10px var(--bg-color);
   border-radius: var(--border-r);
 }
@@ -145,6 +161,7 @@ button.reset-button:hover {
   width: var(--tile-size);
   height: var(--tile-size);
 }
+
 
 /* Footer */
 
@@ -211,7 +228,7 @@ button.reset-button:hover {
 } */
 
 .wrapper .github:hover {
-  background-color: #94eca38e;
+  background-color: #2b2b2b42;
   color: #ffffff;
 }
 

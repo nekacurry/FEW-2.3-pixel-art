@@ -3,6 +3,7 @@ import Grid from './components/Grid'
 import ColorPicker from './components/ColorPicker';
 import Buttons from './components/Buttons';
 import Footer from './components/Footer';
+// import Save from './components/Save';
 
 
 
@@ -15,6 +16,7 @@ function App() {
      <Grid />
      <ColorPicker />
      <Buttons />
+     {/* <Save /> */}
      <Footer />
     </div>
   );
