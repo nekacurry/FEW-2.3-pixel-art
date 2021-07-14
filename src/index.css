@@ -53,7 +53,7 @@ code {
   grid-template-areas: 
   "h h h"
   ". c l"
-  ". b .";
+  "f b .";
 }
 
 /* Header */
@@ -87,14 +87,15 @@ button.fill-button, button.reset-button {
   width: 100px;
   font-size: 1.2rem;
   border-color: var(--bg-color);
+  font-family: 'Nunito';
 }
 
 button.fill-button {
-  background-color:#9a4ef1d8
+  background-color:#9a4ef18f
 }
 
 button.reset-button {
-  background-color: #f14ebdd2;
+  background-color: #f14ebd8c;
 }
 
 button.fill-button:hover {
@@ -110,7 +111,7 @@ button.reset-button:hover {
 .picker {
   grid-area: l;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -140,3 +141,75 @@ button.reset-button:hover {
   width: var(--tile-size);
   height: var(--tile-size);
 }
+
+/* Footer */
+
+.wrapper {
+  grid-area: f;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: var(--bg-color);
+  color: var(--bg-color);
+  border-radius: 50%;
+  padding: 10px;
+  margin: 15px;
+  width: 10px;
+  height: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); */
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* 
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+} */
+
+/* .wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+} */
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* .wrapper .icon:hover span {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+} */
+
+.wrapper .github:hover {
+  background-color: #94eca38e;
+  color: #ffffff;
+}
+
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');

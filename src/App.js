@@ -2,6 +2,9 @@ import './App.css';
 import Grid from './components/Grid'
 import ColorPicker from './components/ColorPicker';
 import Buttons from './components/Buttons';
+import Footer from './components/Footer';
+
+
 
 function App() {
   return (
@@ -12,6 +15,7 @@ function App() {
      <Grid />
      <ColorPicker />
      <Buttons />
+     <Footer />
     </div>
   );
 }
