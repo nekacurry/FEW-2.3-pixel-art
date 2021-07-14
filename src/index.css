@@ -37,7 +37,7 @@ code {
   --col-center: calc((var(--tile-size) * 16) + 35px);
   --grid-height: calc(var(--tile-size) * 16);
 
-  width: calc(var(--tile-size) * (8 + 2 + 10 + 2 + 6));
+  width: calc(var(--tile-size) * (8 + 2 + 10 + 2 + 5.9));
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
