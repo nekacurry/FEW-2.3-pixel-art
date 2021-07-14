@@ -2,9 +2,9 @@
 :root {
   --bg-color: #ffffff42;
 
-  --cols: 10;
-  --rows: 10;
-  --tile-size: 45px;
+  --cols: 16;
+  --rows: 16;
+  --tile-size: 30px;
   --border-r: 5px;
 
 }
@@ -34,10 +34,10 @@ code {
   box-shadow: 5px 5px 10px #00000009, -4px -1px 10px #0000001e;
 
   --col-side: calc(var(--tile-size) * 4);
-  --col-center: calc((var(--tile-size) * 10) + 30px);
-  --grid-height: calc(var(--tile-size) * 10);
+  --col-center: calc((var(--tile-size) * 16) + 35px);
+  --grid-height: calc(var(--tile-size) * 16);
 
-  width: calc(var(--tile-size) * (4 + 1 + 10 + 1 + 4));
+  width: calc(var(--tile-size) * (8 + 2 + 10 + 2 + 8));
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -66,7 +66,7 @@ code {
 
 .buttons {
   grid-area: b;
-  align-self: start;
+  align-self: center;
   display: flex;
   justify-content: space-around;
 }
