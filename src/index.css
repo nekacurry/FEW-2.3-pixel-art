@@ -84,7 +84,7 @@ h1.App-title {
 button.fill-button, button.reset-button, button.save-btn {
   display:inline-block;
   padding:0.3em 1.2em;
-  margin:1.5em 1em 1em 1.5em;
+  
   border:0.16em solid rgba(255,255,255,0);
   border-radius: 1em;
   box-sizing: border-box;
@@ -98,6 +98,10 @@ button.fill-button, button.reset-button, button.save-btn {
   font-size: 1.2rem;
   border-color: var(--bg-color);
   font-family: 'Nunito';
+}
+
+button.fill-button, button.reset-button {
+  margin:1.5em 1em 1em 1.5em;
 }
 
 button.save-btn {
