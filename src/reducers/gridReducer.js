@@ -4,7 +4,7 @@ import { SET_COLOR, FILL_COLOR, RESET} from '../actions';
 const defaultGrid = () => {
   const arr = []
   for (let i = 0; i < 256; i += 1 ) {
-    arr.push('#ffffff75')
+    arr.push('')
   }
   return arr
 }

@@ -20,10 +20,10 @@ function Grid() {
         />)}
       </div>
       <button 
-        onClick={() => exportComponentAsPNG(panelRef, { html2CanvasOptions: {backgroundColor: null}})}
+        onClick={() => exportComponentAsPNG(panelRef, { html2CanvasOptions: {backgroundColor: "#ffffff00"}})}
         className='save-btn'>
           Save
-        </button>
+      </button>
     </div>
   )
 }
