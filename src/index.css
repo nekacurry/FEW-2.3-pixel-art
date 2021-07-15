@@ -157,7 +157,7 @@ button.save-btn:hover {
   grid-gap: 1px;
   align-self: flex-start;
   grid-area: c;
-  /* background-color: rgba(255, 255, 255, 0.63); */
+  background-color: #ffffff25;
   border: solid 10px var(--bg-color);
   border-radius: var(--border-r);
 }
