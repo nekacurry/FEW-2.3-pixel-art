@@ -34,7 +34,7 @@ code {
   box-shadow: 5px 5px 10px #00000009, -4px -1px 10px #0000001e;
 
   --col-side: calc(var(--tile-size) * 4);
-  --col-center: calc((var(--tile-size) * 16) + 35px);
+  --col-center: calc((var(--tile-size) * 16) + 20px);
   --grid-height: calc(var(--tile-size) * 16);
 
   width: calc(var(--tile-size) * (8 + 2 + 10 + 2 + 5.9));
@@ -154,7 +154,7 @@ button.save-btn:hover {
 .Grid {
   display: grid;
   grid-template-columns: repeat(var(--cols), var(--tile-size));
-  grid-gap: 1px;
+  /* grid-gap: 1px; */
   align-self: flex-start;
   grid-area: c;
   background-color: #ffffff25;
