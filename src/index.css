@@ -81,7 +81,7 @@ h1.App-title {
   flex-direction: column;
 }
 
-button.fill-button, button.reset-button, button.save-btn {
+button.fill-button, button.reset-button, button.save-btn, input.erase-button {
   display:inline-block;
   border:0.16em solid rgba(255,255,255,0);
   border-radius: 1em;
@@ -116,6 +116,10 @@ button.reset-button {
   background-color: #f14ebd8c;
 }
 
+input.erase-button {
+  background-color: #ffee00a1;
+}
+
 button.fill-button:hover {
   background-color: #8242cad8
 }
@@ -128,25 +132,34 @@ button.save-btn:hover {
   background-color: #3dc08eb6;
 }
 
+input.erase-button:hover {
+  background-color: #dfd000e0;
+}
+
 
 /* Color Picker */
 
-.picker {
+.tools {
   grid-area: r;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin-top: 37px;
-  margin-left: 14px;
+  flex-direction: column;
+  /* margin-top: 37px; */
+  margin-right: 40px;
 }
 
 .picker > input {
-  width: 50px;
-  height: 300px;
+  width: 100px;
+  height: 50px;
   background-color: var(--bg-color);
   border-color: var(--bg-color);
   border-radius: var(--border-r);
   cursor: crosshair;
+}
+
+.picker > input, .eraser > input {
+  margin:1.5em 1em 1em 1.5em;
 }
 
 /* Grid */

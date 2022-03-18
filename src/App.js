@@ -16,7 +16,6 @@ function App() {
      <Grid />
      <ColorPicker />
      <Buttons />
-     {/* <Save /> */}
      <Footer />
     </div>
   );

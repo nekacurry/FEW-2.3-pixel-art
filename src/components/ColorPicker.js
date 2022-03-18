@@ -8,6 +8,7 @@ function ColorPicker() {
   const dispatch = useDispatch()
 
   return (
+    <div className='tools'>
     <div className={'picker'}>
       <input 
         type="color"
@@ -18,6 +19,18 @@ function ColorPicker() {
         }}
       />
     </div>
+    <div className='eraser'>
+    <input 
+        className='erase-button'
+        type='button'
+        value={'Erase'}
+        onClick={ e => {
+          setColor( '#ffffff00' )
+          dispatch(pickColor('#ffffff00'))
+        }}
+      />
+    </div>
+  </div>
   )
 }
 

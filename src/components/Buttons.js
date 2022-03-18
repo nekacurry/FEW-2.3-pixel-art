@@ -15,6 +15,7 @@ function Buttons() {
       <button className="reset-button" onClick={(e) => {
         dispatch(reset())
       }}>Reset</button>
+
     </div>
   )
 }

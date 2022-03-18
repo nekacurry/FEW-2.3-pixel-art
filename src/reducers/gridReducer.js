@@ -25,6 +25,12 @@ const gridReducer = (state = defaultGrid(), action) => {
     case RESET:
       return defaultGrid()
 
+    // case ERASE:
+    //   return {
+    //     ...state,
+    //     color: state.color.filter(color => color.id !== action.id)
+    //   };
+
     default:
       return state
 
